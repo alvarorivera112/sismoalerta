@@ -8,65 +8,44 @@
 </head>
 <body>
 
-  <!-- HERO / PORTADA -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>SismoAlerta</h1>
-      <p>Sistema educativo de alerta sísmica diseñado para guiar acciones seguras durante eventos sísmicos.</p>
-      <button id="btnMostrar" class="btn">Conocer más</button>
-    </div>
+    <h1>SismoAlerta</h1>
+    <p>Sistema educativo de alerta sísmica diseñado para guiar acciones seguras durante eventos sísmicos.</p>
+    <button id="toggleInfo">Conocer más</button>
   </section>
 
-  <!-- CONTENIDO DESPLEGABLE -->
-  <section id="info" class="info oculto">
-
+  <section class="info hidden" id="infoSection">
     <h2>¿Quiénes se benefician?</h2>
-    <div class="beneficios">
+    <div class="cards">
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Administradores">
         <h3>Administradores</h3>
-        <button class="toggle">Ver más</button>
-        <p class="detalle oculto">Pueden supervisar el estado del sistema y asegurar su correcto uso.</p>
+        <p>Supervisan el sistema y gestionan usuarios.</p>
       </div>
-
       <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="Docentes">
+        <h3>Técnicos</h3>
+        <p>Monitorean los nodos y el estado de la red.</p>
+      </div>
+      <div class="card">
         <h3>Docentes</h3>
-        <button class="toggle">Ver más</button>
-        <p class="detalle oculto">Cuentan con una guía visual y auditiva para mantener la calma y evacuar correctamente.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2995/2995620.png" alt="Estudiantes">
-        <h3>Estudiantes</h3>
-        <button class="toggle">Ver más</button>
-        <p class="detalle oculto">Reciben instrucciones claras para actuar sin pánico y con seguridad.</p>
+        <p>Realizan simulacros educativos con los estudiantes.</p>
       </div>
     </div>
-
-    <h2>Características Principales</h2>
-    <ul class="lista">
-      <li>✅ Activación inmediata de alerta sonora y visual.</li>
-      <li>✅ Simulaciones para prácticas de evacuación.</li>
-      <li>✅ Sistema diseñado para instituciones educativas.</li>
-      <li>✅ Comunicación clara para prevenir el pánico.</li>
-    </ul>
-
+    <button id="hideInfo">Ocultar</button>
   </section>
 
 <script>
-  // Mostrar/Ocultar sección completa
-  document.getElementById("btnMostrar").addEventListener("click", () => {
-    document.getElementById("info").classList.toggle("oculto");
+  const infoSection = document.getElementById("infoSection");
+  const toggleInfo = document.getElementById("toggleInfo");
+  const hideInfo = document.getElementById("hideInfo");
+
+  toggleInfo.addEventListener("click", () => {
+    infoSection.classList.remove("hidden");
+    infoSection.scrollIntoView({ behavior: 'smooth' });
   });
 
-  // Mostrar detalle en tarjetas
-  document.querySelectorAll(".toggle").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      let p = btn.nextElementSibling;
-      p.classList.toggle("oculto");
-      btn.textContent = p.classList.contains("oculto") ? "Ver más" : "Ocultar";
-    });
+  hideInfo.addEventListener("click", () => {
+    infoSection.classList.add("hidden");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 
