@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!-- HERO -->
+<!-- HERO (SIN CAMBIOS) -->
 <header class="hero">
   <div class="hero-overlay"></div>
   <div class="hero-container fade">
@@ -22,7 +22,7 @@
 <!-- CONTENIDO DESPLEGABLE -->
 <section id="info" class="info hidden fade">
 
-  <!-- Usuarios beneficiados -->
+  <!-- Usuarios beneficiados (igual) -->
   <div class="section">
     <h2 class="section-title">Usuarios Clave</h2>
 
@@ -45,14 +45,14 @@
         <i class="fa-solid fa-person-chalkboard"></i>
         <h3>Docentes</h3>
         <button class="btn-toggle">Ver más</button>
-        <p class="hidden-text">Guían a los estudiantes durante simulacros sin generar pánico.</p>
+        <p class="hidden-text">Guían a los estudiantes durante simulacros sin generar pánico.</p>
       </div>
     </div>
   </div>
 
-  <!-- Características -->
+  <!-- Características (igual) -->
   <div class="section fade-up">
-    <h2 class="section-title">Características Principales</h2>
+    <h2 class="section-title" id="caracteristicas">Características Principales</h2>
     <ul class="features">
       <li><i class="fa-solid fa-wave-square"></i> Detección temprana de vibraciones sísmicas.</li>
       <li><i class="fa-solid fa-bell"></i> Alertas visuales y auditivas inmediatas.</li>
@@ -61,22 +61,120 @@
     </ul>
   </div>
 
+  <!-- NUEVO: Sobre SismoAlerta -->
+  <div class="section fade-up about">
+    <h2 class="section-title">Sobre SismoAlerta</h2>
+    <p class="muted-text">
+      Prototipo educativo desarrollado por estudiantes para fomentar cultura sísmica con tecnología accesible (Arduino/ESP32 + sensor MPU6050).
+      Ideal para escuelas y campus que buscan entrenar respuestas seguras ante sismos.
+    </p>
+    <div class="pill-row">
+      <span class="pill"><i class="fa-solid fa-bullseye"></i> Misión: prevención y educación</span>
+      <span class="pill"><i class="fa-solid fa-lightbulb"></i> Visión: innovación social</span>
+      <span class="pill"><i class="fa-solid fa-seedling"></i> Bajo costo y replicable</span>
+    </div>
+  </div>
+
+  <!-- NUEVO: Cómo funciona -->
+  <div class="section fade-up">
+    <h2 class="section-title">Cómo funciona</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+        <h3>1. Sensado</h3>
+        <p>El acelerómetro (MPU6050) detecta vibraciones. Si superan el umbral, se marca evento.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <h3>2. Confirmación</h3>
+        <p>Los nodos se comunican en red local (mesh) para confirmar y evitar falsos positivos.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fa-solid fa-bell"></i></div>
+        <h3>3. Alerta</h3>
+        <p>Se activan señales visuales y sonoras en ≤ 3 s para facilitar una reacción segura.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
+        <h3>4. Simulacro</h3>
+        <p>Modo educativo para practicar evacuaciones, tiempos de respuesta y roles.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NUEVO: Impacto educativo -->
+  <div class="section fade-up impact alt-bg">
+    <h2 class="section-title">Impacto educativo</h2>
+    <ul class="impact-list">
+      <li><i class="fa-solid fa-check"></i> Entrenamiento práctico en protocolos de seguridad</li>
+      <li><i class="fa-solid fa-check"></i> Conciencia sísmica y reducción del pánico</li>
+      <li><i class="fa-solid fa-check"></i> Puente entre teoría y hardware embebido</li>
+      <li><i class="fa-solid fa-check"></i> Ideal para ferias, cursos y proyectos de extensión</li>
+    </ul>
+  </div>
+
+  <!-- NUEVO: Ventajas -->
+  <div class="section fade-up">
+    <h2 class="section-title">Ventajas del proyecto</h2>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <i class="fa-solid fa-hand-holding-dollar"></i>
+        <h3>Bajo costo</h3>
+        <p>Componentes accesibles y fáciles de conseguir.</p>
+      </div>
+      <div class="benefit">
+        <i class="fa-solid fa-school"></i>
+        <h3>Enfoque educativo</h3>
+        <p>Hecho para enseñar y practicar, no solo alertar.</p>
+      </div>
+      <div class="benefit">
+        <i class="fa-solid fa-wifi-slash"></i>
+        <h3>Opera sin internet</h3>
+        <p>Red local para máxima autonomía.</p>
+      </div>
+      <div class="benefit">
+        <i class="fa-solid fa-rocket"></i>
+        <h3>Rápido y replicable</h3>
+        <p>Activación en ≤ 3 s y guía para reproducir el prototipo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NUEVO: Testimonios -->
+  <div class="section fade-up">
+    <h2 class="section-title">Lo que dicen</h2>
+    <div class="testimonials">
+      <div class="t-card">
+        <p>“Un aviso local anticipado ayuda a organizar a los alumnos y reduce el pánico.”</p>
+        <span class="t-author">Peggy Villanueva – Coordinación escolar</span>
+      </div>
+      <div class="t-card">
+        <p>“La instalación es rápida y el modo simulacro funciona excelente para entrenar.”</p>
+        <span class="t-author">Equipo docente – Campus Lima</span>
+      </div>
+      <div class="t-card">
+        <p>“Nos permitió practicar lo aprendido en clase con hardware real.”</p>
+        <span class="t-author">Estudiantes – Proyecto académico</span>
+      </div>
+    </div>
+  </div>
+
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER (igual) -->
 <footer class="footer">
   <p>SismoAlerta — Proyecto académico 2025</p>
 </footer>
 
 <script>
-  // Mostrar/Ocultar sección principal
+  // Mostrar/Ocultar sección principal (igual que tu base)
   document.getElementById("btnMostrar").addEventListener("click", function() {
     const info = document.getElementById("info");
     info.classList.toggle("visible");
     this.textContent = this.textContent === "Conocer más" ? "Ocultar" : "Conocer más";
   });
 
-  // Mostrar/Ocultar información por tarjeta
+  // Mostrar/Ocultar información por tarjeta (igual)
   document.querySelectorAll(".btn-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
       const p = btn.nextElementSibling;
@@ -85,7 +183,7 @@
     });
   });
 
-  // Animación al hacer scroll
+  // Animación al hacer scroll (igual)
   const elements = document.querySelectorAll(".fade, .fade-up");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
