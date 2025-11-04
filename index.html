@@ -3,94 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SismoAlerta – Alerta sísmica educativa</title>
+    <title>SismoAlerta</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Sección Portada -->
+<!-- Hero -->
 <header class="hero">
-    <h1>SismoAlerta</h1>
-    <p>Alerta sísmica inmediata para instituciones educativas.</p>
-    <a href="#sobre" class="btn">Conocer más</a>
+    <div class="hero-content">
+        <h1>SismoAlerta</h1>
+        <p>Alerta sísmica inmediata y herramientas educativas para instituciones.</p>
+        <a href="#caracteristicas" class="btn-primary">Conocer más</a>
+    </div>
 </header>
 
-<!-- Problema -->
-<section class="section" id="sobre">
-    <h2>¿Qué problema resuelve?</h2>
-    <p>
-        Las instituciones educativas requieren una forma rápida y confiable de alertar a los estudiantes y personal ante movimientos sísmicos. 
-        SismoAlerta permite detectar sismos en tiempo real y emitir avisos inmediatos para una evacuación segura.
+<!-- Sección Problemática -->
+<section class="section fade-in">
+    <h2>¿Por qué SismoAlerta?</h2>
+    <p class="section-desc">
+        Las escuelas necesitan reaccionar rápido ante un sismo. Nuestro sistema detecta vibraciones, alerta en menos de 3 segundos y guía acciones seguras.
     </p>
 </section>
 
-<!-- Para quién está hecho -->
-<section class="section bg-light">
-    <h2>¿Para quién está diseñado?</h2>
-    <div class="cards">
+<!-- Beneficiarios -->
+<section class="section bg-light fade-in">
+    <h2>Usuarios Principales</h2>
+    <div class="card-grid">
         <div class="card">
+            <i class="fa-solid fa-shield-halved"></i>
             <h3>Administradores</h3>
-            <p>Supervisan el estado del sistema y gestionan configuraciones.</p>
+            <p>Supervisan la red y aseguran el acceso seguro al sistema.</p>
         </div>
         <div class="card">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
             <h3>Técnicos</h3>
-            <p>Monitorean nodos y mantienen la red de sensores operativa.</p>
+            <p>Monitorean nodos, diagnostican errores y realizan mantenimiento.</p>
         </div>
         <div class="card">
+            <i class="fa-solid fa-person-chalkboard"></i>
             <h3>Docentes</h3>
-            <p>Utilizan el modo simulacro para entrenar a estudiantes.</p>
+            <p>Usan el modo simulacro para prácticas educativas.</p>
         </div>
     </div>
 </section>
 
 <!-- Características -->
-<section class="section">
-    <h2>Características principales</h2>
-    <ul class="features">
-        <li>✅ Monitoreo en tiempo real de nodos sísmicos.</li>
-        <li>✅ Alertas visuales y auditivas inmediatas.</li>
-        <li>✅ Registro de eventos para análisis posterior.</li>
-        <li>✅ Gestión de usuarios y roles de acceso.</li>
-        <li>✅ Modo de simulacro para prácticas educativas.</li>
-        <li>✅ Exportación de datos para informes.</li>
-    </ul>
+<section id="caracteristicas" class="section fade-in">
+    <h2>Características Principales</h2>
+    <div class="feature-list">
+        <div class="feature-item"><i class="fa-solid fa-bell"></i> Alertas visuales y auditivas inmediatas.</div>
+        <div class="feature-item"><i class="fa-solid fa-wave-square"></i> Monitoreo en tiempo real de nodos.</div>
+        <div class="feature-item"><i class="fa-solid fa-user-gear"></i> Gestión de roles y usuarios.</div>
+        <div class="feature-item"><i class="fa-solid fa-file-export"></i> Exportación de historial a CSV o JSON.</div>
+        <div class="feature-item"><i class="fa-solid fa-cloud-arrow-up"></i> Respaldo en la nube con reconexión automática.</div>
+        <div class="feature-item"><i class="fa-solid fa-graduation-cap"></i> Modo simulacro educativo.</div>
+    </div>
 </section>
 
 <!-- PMV -->
-<section class="section bg-light">
+<section class="section bg-light fade-in">
     <h2>Producto Mínimo Viable (PMV)</h2>
-    <p>
-        La versión inicial demuestra el funcionamiento básico del sistema:
+    <p class="section-desc">
+        Esta versión demuestra la viabilidad del sistema simulando:
     </p>
-    <ul class="features">
-        <li>• Monitoreo de estado de nodos (activo/inactivo).</li>
-        <li>• Señales visuales de alerta ante desconexión o reconexión.</li>
-        <li>• Registro simple de eventos para auditoría.</li>
+    <ul class="pmv-list">
+        <li>✔ Estado de nodos (Activo / Inactivo).</li>
+        <li>✔ Alertas visuales ante fallos.</li>
+        <li>✔ Registro básico de eventos.</li>
     </ul>
 </section>
 
 <!-- Opiniones -->
-<section class="section">
-    <h2>Opiniones destacadas</h2>
-    <div class="cards">
-        <div class="card small">
-            <p>“Necesito ver el estado de los nodos en tiempo real.”</p>
-            <span>- Técnicos</span>
+<section class="section fade-in">
+    <h2>Lo que dijeron los usuarios</h2>
+    <div class="opinion-grid">
+        <div class="opinion-card">
+            “Necesito ver el estado de los nodos en tiempo real.”
+            <span>- Técnico</span>
         </div>
-        <div class="card small">
-            <p>“Requiero gestionar usuarios con roles seguros.”</p>
-            <span>- Administradores</span>
+        <div class="opinion-card">
+            “Requiero una gestión segura de usuarios y accesos.”
+            <span>- Administrador</span>
         </div>
-        <div class="card small">
-            <p>“Quiero un simulador sin generar alarma real.”</p>
-            <span>- Docentes</span>
+        <div class="opinion-card">
+            “El modo simulacro ayuda en la enseñanza sin generar pánico.”
+            <span>- Docente</span>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>SismoAlerta — Proyecto académico · 2025</p>
+    <p>SismoAlerta · Proyecto académico 2025</p>
 </footer>
 
 </body>
