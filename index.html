@@ -11,51 +11,59 @@
 
 <!-- HERO -->
 <header class="hero">
-    <h1>SismoAlerta</h1>
-    <p>Sistema de alerta sísmica educativo para actuar con rapidez y seguridad.</p>
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>SismoAlerta</h1>
+        <p>Sistema educativo de alerta sísmica para actuar con rapidez y seguridad.</p>
 
-    <h3 class="why">¿Por qué es importante?</h3>
-    <p class="reason">
-        Una respuesta rápida puede marcar la diferencia entre el orden y el pánico. SismoAlerta detecta movimientos sísmicos y 
-        activa alarmas inmediatas para apoyar la evacuación segura dentro de instituciones educativas.
-    </p>
+        <h3>¿Por qué es importante?</h3>
+        <p class="reason">
+            Una reacción coordinada reduce el riesgo durante un sismo. Nuestro sistema ayuda a mantener el orden y guiar la evacuación segura.
+        </p>
 
-    <button id="btnMostrar" class="btn-primary">Conocer más</button>
+        <button id="btnMostrar" class="btn-primary">Conocer más</button>
+    </div>
 </header>
 
 <!-- SECCIÓN OCULTA -->
-<section id="info" class="hidden">
+<section id="info" class="hidden fade-section">
 
     <h2>¿Quiénes se benefician?</h2>
     <div class="card-grid">
+
         <div class="card">
             <i class="fa-solid fa-user-shield"></i>
             <h3>Administradores</h3>
-            <p>Gestionan permisos y supervisan el sistema.</p>
+            <button class="btn-toggle">Ver más</button>
+            <p class="hidden-text">Supervisan y gestionan permisos del sistema para mantener el control.</p>
         </div>
+
         <div class="card">
             <i class="fa-solid fa-screwdriver-wrench"></i>
             <h3>Técnicos</h3>
-            <p>Monitorean nodos y aseguran el correcto funcionamiento.</p>
+            <button class="btn-toggle">Ver más</button>
+            <p class="hidden-text">Monitorean los nodos, resuelven fallas y aseguran funcionamiento continuo.</p>
         </div>
+
         <div class="card">
             <i class="fa-solid fa-person-chalkboard"></i>
             <h3>Docentes</h3>
-            <p>Realizan simulacros y guían a los estudiantes.</p>
+            <button class="btn-toggle">Ver más</button>
+            <p class="hidden-text">Realizan simulacros educativos sin generar pánico.</p>
         </div>
+
     </div>
 
-    <h2 class="section-title">Características Principales</h2>
+    <h2>Características Principales</h2>
     <ul class="features">
-        <li><i class="fa-solid fa-wave-square"></i> Detección temprana de vibraciones sísmicas.</li>
-        <li><i class="fa-solid fa-bell"></i> Alertas visuales y sonoras automáticas.</li>
-        <li><i class="fa-solid fa-chart-line"></i> Monitoreo en tiempo real del sistema.</li>
-        <li><i class="fa-solid fa-graduation-cap"></i> Modo simulacro para entrenamiento educativo.</li>
+        <li><i class="fa-solid fa-wave-square"></i> Detección temprana de vibraciones.</li>
+        <li><i class="fa-solid fa-bell"></i> Alertas visuales y sonoras inmediatas.</li>
+        <li><i class="fa-solid fa-chart-line"></i> Monitoreo en tiempo real.</li>
+        <li><i class="fa-solid fa-graduation-cap"></i> Modo simulacro educativo.</li>
     </ul>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p>SismoAlerta — Proyecto académico 2025</p>
 </footer>
@@ -64,6 +72,14 @@
 document.getElementById("btnMostrar").addEventListener("click", function() {
     document.getElementById("info").classList.toggle("show");
     this.textContent = this.textContent === "Conocer más" ? "Ocultar" : "Conocer más";
+});
+
+// Expandir tarjetas
+document.querySelectorAll(".btn-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        btn.nextElementSibling.classList.toggle("visible");
+        btn.textContent = btn.textContent === "Ver más" ? "Ocultar" : "Ver más";
+    });
 });
 </script>
 
