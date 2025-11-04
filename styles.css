@@ -2,113 +2,87 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     color: #1a1a1a;
-    background: #ffffff;
-    scroll-behavior: smooth;
 }
 
 /* Hero */
 .hero {
     background: linear-gradient(to right, #006bff, #00c3ff);
-    padding: 150px 20px;
+    padding: 120px 20px;
     text-align: center;
     color: white;
 }
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-}
+
 .btn-primary {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
     background: white;
     color: #006bff;
+    padding: 12px 28px;
     border-radius: 8px;
+    border: none;
+    cursor: pointer;
     font-weight: bold;
-    text-decoration: none;
+    margin-top: 20px;
+    transition: .3s;
+}
+.btn-primary:hover { transform: scale(1.05); }
+
+/* Oculto/Visible */
+.hidden { 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    padding: 0 12%;
+}
+.show {
+    max-height: 2000px;
+    padding: 60px 12%;
 }
 
-/* Section styles */
-.section {
-    padding: 80px 10%;
-    text-align: center;
-}
-.bg-light {
-    background: #f7faff;
-}
-.section-desc {
-    max-width: 700px;
-    margin: auto;
-    font-size: 17px;
-}
-
-/* Cards */
+/* Cards de Usuarios */
 .card-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-.card {
-    background: white;
-    width: 260px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: transform .3s;
-}
-.card:hover {
-    transform: translateY(-8px);
-}
-.card i {
-    font-size: 38px;
-    color: #007cff;
-    margin-bottom: 10px;
-}
-
-/* Features */
-.feature-list {
-    max-width: 750px;
-    margin: auto;
-    text-align: left;
-}
-.feature-item {
-    padding: 12px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-.feature-item i {
-    color: #007cff;
-}
-
-/* PMV */
-.pmv-list {
-    list-style: none;
-    padding: 0;
-    font-size: 18px;
-    line-height: 2;
-}
-
-/* Opiniones */
-.opinion-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
+    margin-top: 30px;
 }
-.opinion-card {
+
+.card {
+    background: #ffffff;
     width: 260px;
-    padding: 20px;
-    background: #e9f3ff;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.card i {
+    font-size: 42px;
+    color: #007cff;
+    margin-bottom: 10px;
+}
+
+/* Características */
+.features {
+    max-width: 650px;
+    margin: 40px auto 0;
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+.features li {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.features i {
+    color: #007cff;
 }
 
 /* Footer */
 footer {
-    padding: 20px;
     background: #00224d;
     color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
 }
