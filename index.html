@@ -12,49 +12,52 @@
 <!-- HERO -->
 <header class="hero">
   <div class="hero-overlay"></div>
-  <div class="hero-container">
+  <div class="hero-container fade">
     <h1 class="hero-title">SismoAlerta</h1>
-    <p class="hero-subtitle">Sistema de alerta sísmica educativa para actuar con rapidez y seguridad.</p>
+    <p class="hero-subtitle">Sistema educativo de alerta sísmica diseñado para guiar acciones seguras durante eventos sísmicos.</p>
     <button id="btnMostrar" class="btn-primary">Conocer más</button>
   </div>
 </header>
 
 <!-- CONTENIDO DESPLEGABLE -->
-<section id="info" class="info hidden">
+<section id="info" class="info hidden fade">
 
   <!-- Usuarios beneficiados -->
-  <div class="section section-users">
-    <h2 class="section-title">Usuarios clave</h2>
+  <div class="section">
+    <h2 class="section-title">Usuarios Clave</h2>
+
     <div class="card-grid">
-      <div class="card">
+      <div class="card fade-up">
         <i class="fa-solid fa-user-shield"></i>
         <h3>Administradores</h3>
         <button class="btn-toggle">Ver más</button>
-        <p class="hidden-text">Gestionan usuarios, roles y supervisan el sistema completo.</p>
+        <p class="hidden-text">Supervisan usuarios, accesos y eventos registrados para garantizar el control.</p>
       </div>
-      <div class="card">
+
+      <div class="card fade-up">
         <i class="fa-solid fa-screwdriver-wrench"></i>
         <h3>Técnicos</h3>
         <button class="btn-toggle">Ver más</button>
-        <p class="hidden-text">Monitorean nodos, diagnostican fallos y dan soporte técnico.</p>
+        <p class="hidden-text">Monitorean nodos, detectan fallas, realizan mantenimiento preventivo.</p>
       </div>
-      <div class="card">
+
+      <div class="card fade-up">
         <i class="fa-solid fa-person-chalkboard"></i>
         <h3>Docentes</h3>
         <button class="btn-toggle">Ver más</button>
-        <p class="hidden-text">Utilizan el modo simulacro para entrenar a los estudiantes sin generar pánico.</p>
+        <p class="hidden-text">Guían a los estudiantes durante simulacros sin generar pánico.</p>
       </div>
     </div>
   </div>
 
   <!-- Características -->
-  <div class="section section-features">
-    <h2 class="section-title">Características principales</h2>
+  <div class="section fade-up">
+    <h2 class="section-title">Características Principales</h2>
     <ul class="features">
       <li><i class="fa-solid fa-wave-square"></i> Detección temprana de vibraciones sísmicas.</li>
-      <li><i class="fa-solid fa-bell"></i> Alertas visuales y auditivas automáticas.</li>
+      <li><i class="fa-solid fa-bell"></i> Alertas visuales y auditivas inmediatas.</li>
       <li><i class="fa-solid fa-chart-line"></i> Monitoreo en tiempo real de nodos.</li>
-      <li><i class="fa-solid fa-graduation-cap"></i> Modo simulacro educativo integrado.</li>
+      <li><i class="fa-solid fa-graduation-cap"></i> Modo simulacro educativo.</li>
     </ul>
   </div>
 
@@ -66,12 +69,14 @@
 </footer>
 
 <script>
+  // Mostrar/Ocultar sección principal
   document.getElementById("btnMostrar").addEventListener("click", function() {
     const info = document.getElementById("info");
     info.classList.toggle("visible");
     this.textContent = this.textContent === "Conocer más" ? "Ocultar" : "Conocer más";
   });
 
+  // Mostrar/Ocultar información por tarjeta
   document.querySelectorAll(".btn-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
       const p = btn.nextElementSibling;
@@ -79,6 +84,15 @@
       btn.textContent = btn.textContent === "Ver más" ? "Ocultar" : "Ver más";
     });
   });
+
+  // Animación al hacer scroll
+  const elements = document.querySelectorAll(".fade, .fade-up");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add("visible-scroll");
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
 </script>
 
 </body>
