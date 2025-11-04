@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SismoAlerta</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Carga de estilos (con cache-buster para forzar actualización) -->
+  <link rel="stylesheet" href="./styles.css?v=2" />
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -22,7 +26,7 @@
 <!-- CONTENIDO DESPLEGABLE -->
 <section id="info" class="info hidden fade">
 
-  <!-- Usuarios beneficiados (igual) -->
+  <!-- Usuarios beneficiados (tuyo) -->
   <div class="section">
     <h2 class="section-title">Usuarios Clave</h2>
 
@@ -50,7 +54,7 @@
     </div>
   </div>
 
-  <!-- Características (igual) -->
+  <!-- Características (tuya) -->
   <div class="section fade-up">
     <h2 class="section-title" id="caracteristicas">Características Principales</h2>
     <ul class="features">
@@ -161,20 +165,20 @@
 
 </section>
 
-<!-- FOOTER (igual) -->
+<!-- FOOTER -->
 <footer class="footer">
   <p>SismoAlerta — Proyecto académico 2025</p>
 </footer>
 
 <script>
-  // Mostrar/Ocultar sección principal (igual que tu base)
+  // Mostrar/Ocultar sección principal (tu lógica)
   document.getElementById("btnMostrar").addEventListener("click", function() {
     const info = document.getElementById("info");
     info.classList.toggle("visible");
     this.textContent = this.textContent === "Conocer más" ? "Ocultar" : "Conocer más";
   });
 
-  // Mostrar/Ocultar información por tarjeta (igual)
+  // Mostrar/Ocultar información por tarjeta (tu lógica)
   document.querySelectorAll(".btn-toggle").forEach(btn => {
     btn.addEventListener("click", () => {
       const p = btn.nextElementSibling;
@@ -183,7 +187,7 @@
     });
   });
 
-  // Animación al hacer scroll (igual)
+  // Animación al hacer scroll (tu lógica)
   const elements = document.querySelectorAll(".fade, .fade-up");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
